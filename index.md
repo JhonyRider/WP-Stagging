@@ -2,7 +2,7 @@
 
 ## 1) Create a WordPress Azure App Service with a slot
 
-*Note: The slot can be created later as well*
+*Note: The slot can be created later as well but extra steps will be required to create and connect the slot database*
 
 Go to [https://ms.portal.azure.com/#create/WordPress.WordPress](https://ms.portal.azure.com/#create/WordPress.WordPress).  
 Navigate to the **Deployment** tab and check **"Add staging slot"**. You can leave the rest of the configuration as default.
@@ -17,8 +17,9 @@ By default, App Services are configured with **Managed Identity integration** an
 If this is not already set, ensure that VNET Integration is configured for the staging slot to match the settings of the main application.
 
 ---
+## When the the slot is created after the creation of the wordpress:
 
-## Create a New Database
+# Create a New Database
 
 Create a new database inside the existing **Azure Database for MySQL Flexible Server**.  
 This can be done using **phpMyAdmin** from the main application:
